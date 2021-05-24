@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c98e0c4423def5e1394b77df368d2418",
+    "content-hash": "7759431e303e2d722a264a8a991a9e84",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -855,41 +855,6 @@
                 "source": "https://github.com/guzzle/psr7/tree/1.8.2"
             },
             "time": "2021-04-26T09:17:50+00:00"
-        },
-        {
-            "name": "khakimjanovich/middleware",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:Khakimjanovich/Middleware.git",
-                "reference": "58dec52466b2095383a6b024292abc931c5e8573"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Khakimjanovich/Middleware/zipball/58dec52466b2095383a6b024292abc931c5e8573",
-                "reference": "58dec52466b2095383a6b024292abc931c5e8573",
-                "shasum": ""
-            },
-            "require-dev": {
-                "orchestra/testbench": "^6.17"
-            },
-            "default-branch": true,
-            "type": "library",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "khkaimjanovich",
-                    "email": "yunusalikhakimjanovich@gmail.com"
-                }
-            ],
-            "description": "A middleware for server to server connection",
-            "support": {
-                "source": "https://github.com/Khakimjanovich/Middleware/tree/main",
-                "issues": "https://github.com/Khakimjanovich/Middleware/issues"
-            },
-            "time": "2021-05-24T09:45:26+00:00"
         },
         {
             "name": "laravel/framework",
@@ -7365,9 +7330,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "khakimjanovich/middleware": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
