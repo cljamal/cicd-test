@@ -47,6 +47,5 @@ jobs:
       
     - name: Test migrations
       run: |
-        service mysqld start
         php artisan migrate:fresh --seed
     
