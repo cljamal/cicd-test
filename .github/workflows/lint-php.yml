@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: add php cs
-        uses: OskarStark/phpcs-ga@3.4.2
+        uses: chindit/actions-phpcs@1.0.1
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
