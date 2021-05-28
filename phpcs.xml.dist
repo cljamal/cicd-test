@@ -2,9 +2,6 @@
 <ruleset name="Coding Standard for PHP">
     <description>A well crafted coding standard for PHP based on PSR 12, adapted to Laravel</description>
 
-    <!-- Import slevomat/coding-standard sniffs -->
-    <config name="installed_paths" value="vendor/slevomat/coding-standard"/>
-
     <!-- The files and directory to include -->
     <file>app</file>
     <file>config</file>
@@ -80,43 +77,7 @@
             <property name="equalsSpacing" value="1"/>
         </properties>
     </rule>
-
-    <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
-    <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility">
-        <properties>
-            <property name="fixable" type="boolean" value="true"/>
-        </properties>
-    </rule>
-    <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference"/>
-    <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements"/>
-    <rule ref="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment"/>
-    <rule ref="SlevomatCodingStandard.Commenting.EmptyComment"/>
-    <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration">
-        <exclude-pattern>*/database/*</exclude-pattern>
-    </rule>
-    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowContinueWithoutIntegerOperandInSwitch"/>
-    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
-    <rule ref="SlevomatCodingStandard.ControlStructures.LanguageConstructWithParentheses"/>
-    <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator"/>
-    <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation">
-        <exclude-pattern>*/tests/*</exclude-pattern>
-    </rule>
-    <rule ref="SlevomatCodingStandard.Namespaces.NamespaceDeclaration"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.UseFromSameNamespace"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.UseSpacing"/>
-    <rule ref="SlevomatCodingStandard.PHP.ShortList"/>
-    <rule ref="SlevomatCodingStandard.PHP.UselessParentheses"/>
-    <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
-    <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"/>
-    <!-- <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue"/> -->
-    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing"/>
-    <!-- <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing"/> -->
-    <rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable"/>
-
+   
     <!-- Relax some rules for Laravel -->
     <rule ref="PSR1.Files.SideEffects">
         <exclude-pattern>public/index.php</exclude-pattern>
