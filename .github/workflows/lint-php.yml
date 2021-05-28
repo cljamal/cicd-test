@@ -17,11 +17,13 @@ jobs:
         
       - name: add php cs
         uses: chindit/actions-phpcs@1.0.1
+        with:
+          php-version: "8.0"
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: "7.4"
+          php-version: "8.0"
           coverage: none
           tools: composer
 
