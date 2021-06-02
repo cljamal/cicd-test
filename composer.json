@@ -43,12 +43,10 @@
             "@php ./vendor/bin/phpcs . -s"
         ],
         "post-install-cmd": [
-            "@code-sniffer",
-            "@pre-commit-check"
+            "@code-sniffer"
         ],
         "post-update-cmd": [
-            "@code-sniffer",
-            "@pre-commit-check"
+            "@code-sniffer"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
@@ -59,10 +57,6 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ],
-        "pre-commit-check": [
-            "cp pre-commit.sh .git/hooks/pre-commit",
-            "chmod +x .git/hooks/pre-commit"
         ]
     },
     "extra": {
