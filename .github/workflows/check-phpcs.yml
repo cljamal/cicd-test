@@ -31,4 +31,4 @@ jobs:
       run: php artisan key:generate
 
     - name: PHP Code Sniffer
-      run: php vendor/bin/phpcs --standard=phpcs.xml .
+      run: php vendor/bin/phpcs --standard=phpcs.xml -i
