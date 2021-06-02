@@ -11,6 +11,7 @@
 
     <!-- 2. General -->
     <autoload>./vendor/autoload.php</autoload>
+    <exclude-pattern>*/bootstrap/*</exclude-pattern>
     <exclude-pattern>*/cache/*</exclude-pattern>
     <exclude-pattern>server.php</exclude-pattern>
     <exclude-pattern>*/*.js</exclude-pattern>
@@ -405,7 +406,6 @@
     <rule ref="SlevomatCodingStandard.Arrays.SingleLineArrayWhitespace" />
     <rule ref="SlevomatCodingStandard.Classes.ConstantSpacing" />
     <rule ref="SlevomatCodingStandard.Classes.MethodSpacing" />
-    <rule ref="SlevomatCodingStandard.Functions.RequireArrowFunction" />
     <rule ref="SlevomatCodingStandard.Classes.ParentCallSpacing" />
     <rule ref="SlevomatCodingStandard.Classes.RequireMultiLineMethodSignature" />
     <rule ref="SlevomatCodingStandard.Arrays.SingleLineArrayWhitespace" />
