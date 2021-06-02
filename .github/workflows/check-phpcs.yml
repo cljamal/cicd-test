@@ -22,10 +22,7 @@ jobs:
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       
     - name: Install composer dependencies
-      run: |
-        composer self-update
-        composer clearcache
-        composer install
+      run: composer install
       
     - name: Set required directory permissions
       run: chmod -R 777 storage bootstrap/cache
