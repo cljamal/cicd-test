@@ -3,8 +3,6 @@
     <description>The PSR-12 coding standard.</description>
     <arg name="tab-width" value="4"/>
 
-    <config name="installed_paths" value="./vendor/slevomat/coding-standard"/>
-
     <file>app</file>
     <file>public</file>
     <file>resources</file>
