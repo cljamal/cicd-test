@@ -35,6 +35,21 @@
         }
     },
     "scripts": {
+        "code-sniffer": [
+            "./vendor/bin/phpcs --config-set default_standard phpcs.xml",
+            "./vendor/bin/phpcs --config-set colors 1"
+        ],
+        "sniff": [
+            "@php ./vendor/bin/phpcs . -s"
+        ],
+        "post-install-cmd": [
+            "@code-sniffer",
+            "@pre-commit-check"
+        ],
+        "post-update-cmd": [
+            "@code-sniffer",
+            "@pre-commit-check"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -44,6 +59,10 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "pre-commit-check": [
+            "cp pre-commit.sh .git/hooks/pre-commit",
+            "chmod +x .git/hooks/pre-commit"
         ]
     },
     "extra": {
