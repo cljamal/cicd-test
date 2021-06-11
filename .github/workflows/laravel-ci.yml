@@ -17,17 +17,17 @@ jobs:
       with:
         php-version: 8.0.6
         extensions: mbstring, bcmath
-   
-    - name: Initialize ssh keys
-      uses: 7challenger/init-ssh-js@v1
+        
+    - name: Setup SSH key
+      # You may pin to the exact commit or the version.
+      # uses: Boberneprotiv/setup-ssh-key@bfebb889f1ee5a23582bca8af1c8b6ccfd9498e7
+      uses: Boberneprotiv/setup-ssh-key@v1
       with:
-        # SSH private key
-        ssh_private_key: ${{ secrets.SSH_SECRET_KEY }}
-        # SSH public key
-        ssh_public_key: ${{ secrets.SSH_KEY }}
-        # SSH known hosts
-        ssh_known_hosts: ${{ secrets.KNOWN_HOSTS }}
-
+        # Private key required to access the host
+        private-key: ${{ secrets.SSH_SECRET_KEY }}
+        # Hostname or IP to add to the known hosts file
+        known-hosts: ${{ secrets.KNOWN_HOSTS }}
+        
     - name: Copy .env.example to .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
 
