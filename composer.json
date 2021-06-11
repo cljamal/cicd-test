@@ -10,7 +10,8 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.40",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "inbrain/coding-standart": "dev-master"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -22,6 +23,12 @@
         "slevomat/coding-standard": "^7.0",
         "squizlabs/php_codesniffer": "^3.6"
     },
+    "repositories": [
+        {
+            "type": "github",
+            "url": "https://github.com/TDarkCoder/inbrain-coding-standart.git"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "App\\": "app/",
