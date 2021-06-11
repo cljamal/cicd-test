@@ -18,15 +18,20 @@ jobs:
         php-version: 8.0.6
         extensions: mbstring, bcmath
         
-    - name: Setup SSH key
-      # You may pin to the exact commit or the version.
-      # uses: Boberneprotiv/setup-ssh-key@bfebb889f1ee5a23582bca8af1c8b6ccfd9498e7
-      uses: Boberneprotiv/setup-ssh-key@v1
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
       with:
-        # Private key required to access the host
-        private-key: ${{ secrets.SSH_SECRET_KEY }}
-        # Hostname or IP to add to the known hosts file
-        known-hosts: ${{ secrets.KNOWN_HOSTS }}
+        key: ${{ secrets.SSH_KEY }}
+        name: id_rsa # optional
+        known_hosts: ${{ secrets.KNOWN_HOSTS }}
+        config: ${{ secrets.CONFIG }} # ssh_config; optional
+        if_key_exists: replace
+        # SSH private key
+        ssh_private_key: ${{ secrets.SSH_SECRET_KEY }}
+        # SSH public key
+        ssh_public_key: ${{ secrets.SSH_KEY }}
+        # SSH known hosts
+        ssh_known_hosts: ${{ secrets.KNOWN_HOSTS }}
         
     - name: Copy .env.example to .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
