@@ -17,15 +17,16 @@ jobs:
       with:
         php-version: 8.0.6
         extensions: mbstring, bcmath
-    
-    - name: Install SSH key
-      uses: shimataro/ssh-key-action@v2
+   
+    - name: Initialize ssh keys
+      uses: 7challenger/init-ssh-js@v1
       with:
-        key: ${{ secrets.SSH_KEY }}
-        name: id_rsa # optional
-        known_hosts: ${{ secrets.KNOWN_HOSTS }}
-        config: ${{ secrets.CONFIG }} # ssh_config; optional
-        if_key_exists: replace
+        # SSH private key
+        ssh_private_key: ${{ secrets.SSH_SECRET_KEY }}
+        # SSH public key
+        ssh_public_key: ${{ secrets.SSH_KEY }}
+        # SSH known hosts
+        ssh_known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
     - name: Copy .env.example to .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
